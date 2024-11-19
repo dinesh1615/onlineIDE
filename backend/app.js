@@ -19,7 +19,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
+//const cors = require("cors");
+
+app.use(cors({
+  origin: "https://online-ide-lm93.vercel.app", // Your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true, // Allow cookies if necessary
+}));
+
 
 
 app.use('/', indexRouter);
