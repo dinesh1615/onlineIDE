@@ -11,4 +11,4 @@ export const removeClass = (el,className) => {
 };
 
 
-export const api_base_url = "https://online-ide-tan.vercel.app/"
+export const api_base_url = "https://online-ide-tan.vercel.app"
