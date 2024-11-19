@@ -27,7 +27,8 @@ const SignUp = () => {
         name: name,
         email: email,
         password: pwd
-      })
+      }),
+      credentials: "include",
     }).then((res)=>res.json()).then((data)=>{
       if(data.success === true){
         alert("Account created successfully");
