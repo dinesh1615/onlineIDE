@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 //mongoose.connect('mongodb://127.0.0.1:27017/codeIDE');
 
 // Connect to MongoDB Atlas
-mongoose.connect(uri, {
+mongoose.connect(process.env.uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
