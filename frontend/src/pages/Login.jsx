@@ -23,7 +23,8 @@ const Login = () => {
       body: JSON.stringify({
         email: email,
         password: pwd
-      })
+      }),
+      credentials: "include",
     }).then(res => res.json()).then(data => {
       if(data.success === true){
         localStorage.setItem("token", data.token);
