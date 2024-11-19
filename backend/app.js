@@ -21,9 +21,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 const frontendUrl = "http://localhost:5173/";
 app.use(cors({
-  path:frontendUrl,
-  method:["GET","POST","PUT","DELETE"]
+  origin: frontendUrl,
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
