@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-const frontendUrl = "http://localhost:5173";
+const frontendUrl = "http://localhost:5173/";
 app.use(cors({
   path:frontendUrl,
   method:["GET","POST","PUT","DELETE"]
