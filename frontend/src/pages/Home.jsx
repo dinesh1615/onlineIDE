@@ -32,7 +32,8 @@ const Home = () => {
         body: JSON.stringify({
           title: projTitle,
           userId: localStorage.getItem("userId")
-        })
+        }),
+        credentials: "include",
       }).then(res => res.json()).then(data => {
         if (data.success) {
           setIsCreateModelShow(false);
@@ -55,7 +56,8 @@ const Home = () => {
       },
       body: JSON.stringify({
         userId: localStorage.getItem("userId")
-      })
+      }),
+      credentials: "include",
     }).then(res => res.json()).then(data => {
       if (data.success) {
         setData(data.projects);
@@ -82,7 +84,8 @@ const Home = () => {
       },
       body: JSON.stringify({
         userId: localStorage.getItem("userId")
-      })
+      }),
+      credentials: "include",
     }).then(res => res.json()).then(data => {
       if (data.success) {
         setUserData(data.user);

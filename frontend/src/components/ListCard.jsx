@@ -18,7 +18,9 @@ const ListCard = ({item}) => {
       body: JSON.stringify({
         progId: id,
         userId: localStorage.getItem("userId")
-      })
+      }),
+      credentials: "include",
+      
     }).then(res=>res.json()).then(data=>{
       if(data.success){
         setIsDeleteModelShow(false)

@@ -1,10 +1,10 @@
 let mongoose = require('mongoose');
 
 //mongoose.connect('mongodb://127.0.0.1:27017/codeIDE');
-const uri = 'mongodb+srv://dinesh:dinesh@cluster0.nc5l6yl.mongodb.net/codeIDE?retryWrites=true&w=majority&appName=Cluster0';
+//const uri = 'mongodb+srv://dinesh:dinesh@cluster0.nc5l6yl.mongodb.net/codeIDE?retryWrites=true&w=majority&appName=Cluster0';
 
 // Connect to MongoDB Atlas
-mongoose.connect(uri, {
+mongoose.connect(process.env.uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

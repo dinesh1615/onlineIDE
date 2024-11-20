@@ -57,7 +57,8 @@ const Editior = () => {
       body: JSON.stringify({
         userId: localStorage.getItem("userId"),
         projId: projectID // Use projectID here
-      })
+      }),
+      credentials: "include",
     })
       .then(res => res.json())
       .then(data => {

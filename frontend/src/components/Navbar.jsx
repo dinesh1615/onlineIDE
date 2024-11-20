@@ -22,7 +22,8 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
       },
       body: JSON.stringify({
         userId: localStorage.getItem("userId")
-      })
+      }),
+      credentials: "include",
     }).then(res => res.json()).then(data => {
       if (data.success) {
         setData(data.user);
